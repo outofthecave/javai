@@ -52,3 +52,7 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# files generated when running javai
+Instant.java
+Instant.class
