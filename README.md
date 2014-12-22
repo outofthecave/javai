@@ -1,4 +1,4 @@
-javai
-=====
+javai (Java Instant)
+====================
 
-executes any java code that is passed as a string
+run any Java code instantly
