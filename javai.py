@@ -11,8 +11,8 @@ JAVA_CLASS_NAME = "Instant"
 
 # browser is used for opening the Java API
 BROWSER = "google-chrome"
-if os.environ["BROWSER"]:
-    BROWSER = os.environ["BROWSER"]
+if os.environ.get("BROWSER"):
+    BROWSER = os.environ.get("BROWSER")
 
 JAVA_CODE_PREFIX = """\
 import java.io.*;
