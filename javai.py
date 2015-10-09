@@ -16,6 +16,7 @@ if os.environ.get("BROWSER"):
 
 JAVA_CODE_PREFIX = """\
 import java.io.*;
+import java.math.*;
 import java.util.*;
 import java.util.regex.*;
 
