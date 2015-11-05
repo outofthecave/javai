@@ -18,7 +18,9 @@ JAVA_CODE_PREFIX = """\
 import java.io.*;
 import java.math.*;
 import java.util.*;
+import java.util.function.*;
 import java.util.regex.*;
+import java.util.stream.*;
 
 public class %(JAVA_CLASS_NAME)s {
 
