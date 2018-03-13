@@ -82,13 +82,18 @@ def main(arguments):
 
     cl = parser.parse_args(arguments)
 
-    # We need to make all classpath entries absolute paths because we need to
-    # cd into the directory that contains Instant.java for compilation.
-    classpath_entries = cl.classpath.split(":")
-    for i in range(len(classpath_entries)):
-        classpath_entries[i] = os.path.abspath(classpath_entries[i])
+    classpath = cl.classpath
+    if classpath:
+        # We need to make all classpath entries absolute paths because we need to
+        # cd into the directory that contains Instant.java for compilation.
+        classpath_entries = classpath.split(":")
+        for i in range(len(classpath_entries)):
+            classpath_entries[i] = os.path.abspath(classpath_entries[i])
+        classpath = ":".join(classpath_entries)
+    else:
+        classpath = ""
 
-    execute(" ".join(cl.java_code), classpath=":".join(classpath_entries))
+    execute(" ".join(cl.java_code), classpath=classpath)
 
 if __name__ == "__main__":
     main(sys.argv[1:])
